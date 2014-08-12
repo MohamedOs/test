@@ -8,6 +8,8 @@ var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 var arr = [];
 var vars={};
 function pri(priv,pageNumber){
+		alret(priv,pageNumber);
+
 	activityIndicatorCatt.show();
 	//alert("1");
 	//Ti.API.info("sad"+vars.data);
