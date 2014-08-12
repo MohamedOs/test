@@ -73,7 +73,7 @@ var priceVarsP;
 if(vars.d3[i]){
 	priceVarsP=vars.d3[i].p.content;
 }else{
-//	priceVarsP='';
+	priceVarsP='';
 }
 for (var i=0;i<vars.d2.length;i++) {
 arr.push({
