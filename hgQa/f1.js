@@ -69,7 +69,7 @@ var ds = vars.data;
 vars.d1=(getObjects(ds,'class','u-img__img'));  
 vars.d2=(getObjects(ds,'class','d-listing__name u-helper--no-margin'));  
 vars.d3=(getObjects(ds,'class','d-listing__amount'));  
-Ti.API.info(vars.d3);
+Ti.API.info(vars.d3[0].p.content);
 var priceVarsP;
 if(vars.d3[i]){
 	priceVarsP=vars.d3[i].p.content;
