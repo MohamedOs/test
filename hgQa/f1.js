@@ -70,11 +70,11 @@ vars.d1=(getObjects(ds,'class','u-img__img'));
 vars.d2=(getObjects(ds,'class','d-listing__name u-helper--no-margin'));  
 vars.d3=(getObjects(ds,'class','d-listing__amount'));  
 var priceVarsP;
-if(vars.d3[i]){
+//if(vars.d3[i]){
 	priceVarsP=vars.d3[i].p.content;
-}else{
-	priceVarsP='';
-}
+//}else{
+//	priceVarsP='';
+//}
 for (var i=0;i<vars.d2.length;i++) {
 arr.push({
         image:vars.d1[i].src,
