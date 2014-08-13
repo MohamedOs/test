@@ -10,7 +10,7 @@ var adInfoVars5;
 var vars5={};
 var arr5 = [];
 var arrImg5=[];
-function singlePost5(link){
+function singlePost5(nation,link){
 activityIndicator5.show();
 var queryIndex5='select * from html where url="http://'+nation+'.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
 Titanium.Yahoo.yql(queryIndex5, function(et){
