@@ -64,7 +64,12 @@ var ds = vars.data;
 vars.d1=(getObjects(ds,'class','u-img__img'));
 vars.d2=(getObjects(ds,'class','d-listing__name u-helper--no-margin'));
 vars.d3=(getObjects(ds,'class','d-listing__amount'));
-//Ti.API.info(vars.d3[0].p.content);
+Ti.API.info(vars.d3[0].p.content);
+Ti.API.info(vars.d3[1].p.content);
+Ti.API.info(vars.d3[2].p.content);
+Ti.API.info(vars.d3[3].p.content);
+Ti.API.info(vars.d3[4].p.content);
+
 var priceVarsP;
 for (var i=0;i<vars.d2.length;i++) {
 if(vars.d3[i]){
@@ -72,7 +77,7 @@ priceVarsP=vars.d3[i].p.content;
 }else{
 priceVarsP='';
 }
-Ti.API.info(priceVarsP);
+//Ti.API.info(priceVarsP);
 arr.push({
 image:vars.d1[i].src,
 title:vars.d2[i].title,
