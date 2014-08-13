@@ -82,7 +82,7 @@ arr.push({
 image:vars.d1[i].src,
 title:vars.d2[i].title,
 href:vars.d2[i].href,
-price:priceVarsP
+price:vars.d3[i].p.content
 });
 }
 Ti.API.info(arr);
