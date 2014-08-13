@@ -77,7 +77,7 @@ priceVarsP=vars.d3[i].p.content;
 }else{
 priceVarsP='';
 }
-Ti.API.info(priceVarsP);
+//Ti.API.info(priceVarsP);
 arr.push({
 image:vars.d1[i].src,
 title:vars.d2[i].title,
@@ -85,7 +85,7 @@ href:vars.d2[i].href,
 price:priceVarsP
 });
 }
-//Ti.API.info(arr);
+Ti.API.info(arr);
     activityIndicatorCatt.hide();
   	//alert("2");
   	//Ti.API.info(vars.data);
