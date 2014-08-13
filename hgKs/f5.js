@@ -12,7 +12,7 @@ var arr5 = [];
 var arrImg5=[];
 function singlePost5(link){
 	activityIndicator5.show();
-	var queryIndex5='select * from html where url="http://qatar.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
+	var queryIndex5='select * from html where url="http://saudi.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
   Titanium.Yahoo.yql(queryIndex5, function(et){
   	//Ti.API.info(et.data);
   	vars5.data=et.data;
