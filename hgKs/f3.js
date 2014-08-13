@@ -11,15 +11,15 @@ var vars3={};
 function cat(city,index){
 activityIndicatorCat2.show();
 if(index==0){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/cars/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://saudi.dubizzle.com/ar/'+city+'/cars/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
 	}else if(index==1){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/items-for-sale/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://saudi.dubizzle.com/ar/'+city+'/items-for-sale/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
 	}else if(index==2){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-rent/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://saudi.dubizzle.com/ar/'+city+'/property-for-rent/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
 	}else if(index==3){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/property-for-sale/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://saudi.dubizzle.com/ar/'+city+'/property-for-sale/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
 	}else if(index==4){
-var queryIndexCat='select * from html where url="http://qatar.dubizzle.com/ar/'+city+'/jobs/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+var queryIndexCat='select * from html where url="http://saudi.dubizzle.com/ar/'+city+'/jobs/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
 	}	
 
 
