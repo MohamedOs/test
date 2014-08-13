@@ -7,7 +7,7 @@ borderRadius:7
 });
 var arr4 = [];
 var vars4={};
-function pri4(priv,pageNumber){
+function pri4(nation,priv,pageNumber){
 activityIndicator4.show();
 //alert("1");
 //Ti.API.info("sad"+vars.data);
