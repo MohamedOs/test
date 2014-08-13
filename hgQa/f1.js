@@ -68,24 +68,22 @@ var ds = vars.data;
        
 vars.d1=(getObjects(ds,'class','u-img__img'));  
 vars.d2=(getObjects(ds,'class','d-listing__name u-helper--no-margin'));  
-vars.d3=(getObjects(ds,'class','d-listing__amount'));  
-//Ti.API.info(vars.d3[0].p.content);
+vars.d3=(getObjects(ds,'class','d-listing__detail'));
 var priceVarsP;
-
 for (var i=0;i<vars.d2.length;i++) {
-	if(vars.d3[i]){
-	priceVarsP=vars.d3[i].p.content;
+if(vars.d3[i].div[0]){
+priceVarsP=vars.d3[i].div[0].p.content;
 }else{
-	priceVarsP='';
+priceVarsP='';
 }
-	Ti.API.info(priceVarsP);
+//Ti.API.info(priceVarsP);
 arr.push({
-        image:vars.d1[i].src,
-        title:vars.d2[i].title,
-        href:vars.d2[i].href,
-        price:priceVarsP
-    });
-}    
+image:vars.d1[i].src,
+title:vars.d2[i].title,
+href:vars.d2[i].href,
+price:priceVarsP
+});
+}
 //Ti.API.info(arr);
     activityIndicatorCatt.hide();
   	//alert("2");
