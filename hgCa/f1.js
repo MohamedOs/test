@@ -7,12 +7,12 @@ borderRadius:7
 });
 var arr = [];
 var vars={};
-function pri(priv,pageNumber){
+function pri(nation,priv,pageNumber){
 activityIndicatorCatt.show();
 //alert("1");
 //Ti.API.info("sad"+vars.data);
 vars.city=priv;
-var queryIndexF1='select * from html where url="http://'+nation+'.dubizzle.com/ar/'+priv+'/search/?page='+pageNumber+'" and xpath="//*[@class=\'d-listing__item\']"';
+var queryIndexF1='select * from html where url="http://'+nation+'.dubizzle.com/ar/'+priv+'/cars/search/?page='+pageNumber+'" and xpath="//*[@class=\'d-listing__item\']"';
 Titanium.Yahoo.yql(queryIndexF1, function(e){
 vars.data=e.data;
 function getObjects(obj, key, val) {
