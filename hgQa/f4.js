@@ -68,21 +68,21 @@ var ds4 = vars4.data;
        
 vars4.d1=(getObjects(ds4,'class','u-img__img'));  
 vars4.d2=(getObjects(ds4,'class','d-listing__name u-helper--no-margin'));  
-vars4.d3=(getObjects(ds4,'class','d-listing__amount'));  
+vars4.d3=(getObjects(ds4,'class','d-listing__detail'));
 var priceVars;
 for (var i=0;i<vars4.d2.length;i++) {
-if(vars4.d3[i]){
-priceVars=vars4.d3[i].p.content;
+if(vars4.d3[i].div[0]){
+priceVars=vars4.d3[i].div[0].p.content;
 }else{
 priceVars='';
 }
 arr4.push({
-        image:vars4.d1[i].src,
-        title:vars4.d2[i].title,
-        href:vars4.d2[i].href,
-        price:priceVars
-    });
-}    
+image:vars4.d1[i].src,
+title:vars4.d2[i].title,
+href:vars4.d2[i].href,
+price:priceVars
+});
+}
 //Ti.API.info(vars4.data);
     activityIndicator4.hide();
   	//alert("2");
