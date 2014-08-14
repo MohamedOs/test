@@ -7,9 +7,13 @@ borderRadius:7
 });
 var arr3 = [];
 var vars3={};
-function cat(nation,city){
+function cat(nation,city,eindex){
 activityIndicatorCat2.show();
+if(eindex==0){
+var queryIndexCat='select * from html where url="http://'+nation+'.dubizzle.com/ar/'+city+'/property-for-rent/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+}else{
 var queryIndexCat='select * from html where url="http://'+nation+'.dubizzle.com/ar/'+city+'/property-for-sale/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
+}
 Titanium.Yahoo.yql(queryIndexCat, function(etCat){
 // Ti.API.info(etCat.data);
 vars3.data=etCat.data;
