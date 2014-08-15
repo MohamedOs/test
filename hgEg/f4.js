@@ -12,7 +12,7 @@ activityIndicator4.show();
 //alert("1");
 //Ti.API.info("sad"+vars.data);
 vars4.city=priv;
-var queryIndexF14='select * from html where url="http://qatar.dubizzle.com'+priv+'?page='+pageNumber+'" and xpath="//*[@class=\'d-listing__item\']"';
+var queryIndexF14='select * from html where url="http://egypt.dubizzle.com'+priv+'?page='+pageNumber+'" and xpath="//*[@class=\'d-listing__item\']"';
 Titanium.Yahoo.yql(queryIndexF14, function(e){
 vars4.data=e.data;
 //Ti.API.info(e.data);
