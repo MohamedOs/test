@@ -6,11 +6,12 @@ var activityIndicator = Titanium.UI.createActivityIndicator({
         borderRadius:7
     });
 var contentVars;
-var adInfoVars;
+
 var vars2={};
 var arr2 = [];
 var arrImg=[];
 function singlePost(link){
+	var adInfoVars="";
 	activityIndicator.show();
 	var queryIndex2='select * from html where url="http://qatar.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
   Titanium.Yahoo.yql(queryIndex2, function(et){
