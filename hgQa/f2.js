@@ -14,7 +14,7 @@ function singlePost(link){
 	activityIndicator.show();
 	var queryIndex2='select * from html where url="http://qatar.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
   Titanium.Yahoo.yql(queryIndex2, function(et){
-   Ti.API.info(et.data);
+ //  Ti.API.info(et.data);
   	vars2.data=et.data;
 function getObjects(obj, key, val) {
     var objects = [];
@@ -69,6 +69,7 @@ vars.data0=(getObjects(js,'class','rsImg'));
 vars.data1=(getObjects(js,'class','u-c u-c--12o12 u-helper--margin-v-large'));  
 vars.data2=(getObjects(js,'id','call-seller')); 
 vars.data3=(getObjects(js,'class','u-ml'));  
+Ti.API.info(vars.data3);
 for(var i=0;i<vars.data3[0].dt.length;i++){
 adInfoVars=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
 }
