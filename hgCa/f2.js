@@ -5,12 +5,13 @@ zIndex:1,
 backgroundColor:'black',
 borderRadius:7
 });
-var contentVars;
-var adInfoVars;
+
 var vars2={};
 var arr2 = [];
 var arrImg=[];
 function singlePost(nation,link){
+  	var contentVars="";
+var adInfoVars="";
 activityIndicator.show();
 var queryIndex2='select * from html where url="http://'+nation+'.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
 Titanium.Yahoo.yql(queryIndex2, function(et){
@@ -66,10 +67,15 @@ vars.data0=(getObjects(js,'class','rsImg'));
 vars.data1=(getObjects(js,'class','u-c u-c--12o12 u-helper--margin-v-large'));
 vars.data2=(getObjects(js,'id','call-seller'));
 vars.data3=(getObjects(js,'class','u-ml'));
+Ti.API.info(vars.data3[0].dt);
 for(var i=0;i<vars.data3[0].dt.length;i++){
-adInfoVars=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
+adInfoVars+=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
 }
 contentVars=vars.data1[1].div.p.content+'<br>'+vars.data1[1].div.p;
+contentVars=contentVars.replace("[object Object]"," ");
+adInfoVars=adInfoVars.replace("[object Object]"," ");
+contentVars=contentVars.replace("[object Object]"," ");
+adInfoVars=adInfoVars.replace("[object Object]"," ");
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }
