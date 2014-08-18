@@ -87,6 +87,6 @@ price:priceVarsP
 //Ti.API.info(arr);
     activityIndicatorCatt.hide();
   	//alert("2");
-  Ti.API.info(vars.data);
+ // Ti.API.info(vars.data);
   });
 }
