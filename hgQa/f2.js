@@ -74,6 +74,8 @@ for(var i=0;i<vars.data3[0].dt.length;i++){
 adInfoVars+=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
 }
 contentVars=vars.data1[1].div.p.content+'<br>'+vars.data1[1].div.p;
+contentVars=contentVars.replace(/[object Object]/g," ");
+adInfoVars=adInfoVars.replace(/[object Object]/g," ");
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }
