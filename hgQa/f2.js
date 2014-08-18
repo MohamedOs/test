@@ -71,7 +71,7 @@ vars.data2=(getObjects(js,'id','call-seller'));
 vars.data3=(getObjects(js,'class','u-ml'));  
 Ti.API.info(vars.data3[0].dt);
 for(var i=0;i<vars.data3[0].dt.length;i++){
-adInfoVars=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
+adInfoVars+=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
 }
 contentVars=vars.data1[1].div.p.content+'<br>'+vars.data1[1].div.p;
 for (var i=0;i<vars.data0.length;i++) {
