@@ -5,12 +5,13 @@ var activityIndicator = Titanium.UI.createActivityIndicator({
         backgroundColor:'black',
         borderRadius:7
     });
-var contentVars;
+
 
 var vars2={};
 var arr2 = [];
 var arrImg=[];
 function singlePost(link){
+	var contentVars="";
 	var adInfoVars="";
 	activityIndicator.show();
 	var queryIndex2='select * from html where url="http://qatar.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
