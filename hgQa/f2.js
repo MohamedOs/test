@@ -14,7 +14,7 @@ function singlePost(link){
 	activityIndicator.show();
 	var queryIndex2='select * from html where url="http://qatar.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
   Titanium.Yahoo.yql(queryIndex2, function(et){
-  	//Ti.API.info(et.data);
+   Ti.API.info(et.data);
   	vars2.data=et.data;
 function getObjects(obj, key, val) {
     var objects = [];
