@@ -77,6 +77,8 @@ adInfoVars+=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';
 contentVars=vars.data1[1].div.p.content+'<br>'+vars.data1[1].div.p;
 contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
+contentVars=contentVars.replace("[object Object]"," ");
+adInfoVars=adInfoVars.replace("[object Object]"," ");
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }
