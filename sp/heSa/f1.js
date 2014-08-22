@@ -8,7 +8,7 @@ borderRadius:7
 var vars={}; var arr = [];
 function pri(pageNumber){
 activityIndicatorCatt.show();
-var queryIndex='select * from html where url="http://hihi2.com/category/alahli-egypt-news/page/'+pageNumber+'" and xpath="//*[@id=\'content-loop\']"';
+var queryIndex='select * from html where url="http://hihi2.com/category/alhilal-saudi-news/page/'+pageNumber+'" and xpath="//*[@id=\'content-loop\']"';
 Titanium.Yahoo.yql(queryIndex, function(e){
 var res2=e.data;
 vars.data=e.data;
