@@ -11,7 +11,7 @@ var activityIndicatorCatt2 = Titanium.UI.createActivityIndicator({
 function pri2(pageNumber){
 
 	activityIndicatorCatt2.show();
- var queryIndex='select * from html where url="http://superkoora.com/index.php?ref=akhbar&id=38&page='+pageNumber+'&" and xpath="//*[@id=\'list_box\']"';
+ var queryIndex='select * from html where url="http://superkoora.com/index.php?ref=akhbar&id=44&page='+pageNumber+'&" and xpath="//*[@id=\'list_box\']"';
   Titanium.Yahoo.yql(queryIndex, function(en){
 	 vars2.data=en.data;
 	 var resNews=en.data;
