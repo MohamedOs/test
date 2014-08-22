@@ -67,7 +67,7 @@ var data1=(getObjects(js,'rel','bookmark'));
 var data2=(getValues(js,'src'));  
 var data3=(getObjects(js,'class','entry-title'));  
 
-for (var i=0,a=0;i<data2.length;i++,a+1) {
+for (var i=0,a=0;i<data2.length;i++,a+2) {
 arr.push({
         image:data2[i],
         title:data3[i].a.title,
