@@ -1,18 +1,20 @@
-var activityIndicatorCat2 = Titanium.UI.createActivityIndicator({
+var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 width:'80dip',
 height:'80dip',
 zIndex:1,
 backgroundColor:'black',
 borderRadius:7
 });
-var arr3 = [];
-var vars3={};
-function cat(nation,city){
-activityIndicatorCat2.show();
-var queryIndexCat='select * from html where url="http://'+nation+'.dubizzle.com/ar/'+city+'/jobs/search/" and xpath="//*[@class=\'d-nav__cat d-nav__cat--show\']"';
-Titanium.Yahoo.yql(queryIndexCat, function(etCat){
-// Ti.API.info(etCat.data);
-vars3.data=etCat.data;
+var arr = [];
+var vars={};
+function pri(priv,pageNumber){
+activityIndicatorCatt.show();
+//alert("1");
+//Ti.API.info("sad"+vars.data);
+vars.city=priv;
+var queryIndexF1='select * from html where url="http://kuwait.dubizzle.com/ar/'+priv+'/cars/search/?page='+pageNumber+'" and xpath="//*[@class=\'d-listing__item\']"';
+Titanium.Yahoo.yql(queryIndexF1, function(e){
+vars.data=e.data;
 function getObjects(obj, key, val) {
 var objects = [];
 for (var i in obj) {
@@ -58,16 +60,28 @@ objects.push(i);
 }
 return objects;
 }
-var dsCats = vars3.data;
-vars3.d1=(getObjects(dsCats,'class','d-nav__txt'));
-vars3.d2=(getObjects(dsCats,'class','d-nav__name'));
-for (var i=0;i<vars3.d1.length;i++) {
-arr3.push({
-title:vars3.d1[i].content,
-href:vars3.d2[i].href,
+var ds = vars.data;
+vars.d1=(getObjects(ds,'class','u-img__img'));
+vars.d2=(getObjects(ds,'class','d-listing__name u-helper--no-margin'));
+vars.d3=(getObjects(ds,'class','d-listing__detail'));
+var priceVarsP;
+for (var i=0;i<vars.d2.length;i++) {
+if(vars.d3[i].div[0]){
+priceVarsP=vars.d3[i].div[0].p.content;
+}else{
+priceVarsP='';
+}
+//Ti.API.info(priceVarsP);
+arr.push({
+image:vars.d1[i].src,
+title:vars.d2[i].title,
+href:vars.d2[i].href,
+price:priceVarsP
 });
 }
-activityIndicatorCat2.hide();
-//Ti.API.info(arr3);
+//Ti.API.info(arr);
+activityIndicatorCatt.hide();
+//alert("2");
+// Ti.API.info(vars.data);
 });
 }
