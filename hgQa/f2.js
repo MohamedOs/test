@@ -87,7 +87,7 @@ arrImg.push(vars.data0[i].src);
 arrImg.push("http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg");	
 }
 var dataSpan;
-if(vars.data2[0].span){
+if(vars.data2[0]){
 if(vars.data2[0].span[2]){
 dataSpan=vars.data2[0].span[2].content;	
 }else{
@@ -99,7 +99,7 @@ dataSpan="";
 arr2.push({
         image:arrImg,
         content:contentVars,
-        phone:"dataSpan",
+        phone:dataSpan,
         content2:adInfoVars
     });
 Ti.API.info(arr2[0]);
