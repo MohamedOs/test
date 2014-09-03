@@ -80,7 +80,7 @@ contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
 contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
-if(vars.data0){
+if(vars.data0.length !=0){
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }}else{
