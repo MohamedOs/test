@@ -84,7 +84,9 @@ if(vars.data0.length !=0){
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }}else{
-arrImg.push("http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg");	
+for (var i=0;i<2;i++) {
+arrImg.push("http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg");
+}
 }
 var dataSpan;
 if(vars.data2[0]){
