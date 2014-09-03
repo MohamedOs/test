@@ -80,7 +80,7 @@ contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
 contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
-if(vars.data0.length>0){
+if(vars.data0.length>1){
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }}else{
@@ -102,7 +102,7 @@ arr2.push({
         phone:dataSpan,
         content2:adInfoVars
     });
-//Ti.API.info(arr2[0].image[1]);
+Ti.API.info(arr2[0]);
 	activityIndicator.hide();
 
   });
