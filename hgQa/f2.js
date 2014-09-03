@@ -86,10 +86,20 @@ arrImg.push(vars.data0[i].src);
 }}else{
 arrImg.push("http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg");	
 }
+var dataSpan;
+if(vars.data2[0].span){
+if(vars.data2[0].span[2]){
+dataSpan=vars.data2[0].span[2].content;	
+}else{
+dataSpan="";	
+}	
+}else{
+dataSpan="";	
+}
 arr2.push({
         image:arrImg,
         content:contentVars,
-        phone:vars.data2[0].span[2].content,
+        phone:dataSpan,
         content2:adInfoVars
     });
 //Ti.API.info(arr2[0].image[1]);
