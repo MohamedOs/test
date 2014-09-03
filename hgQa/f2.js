@@ -71,7 +71,7 @@ vars.data0=(getObjects(js,'class','rsImg'));
 vars.data1=(getObjects(js,'class','u-c u-c--12o12 u-helper--margin-v-large'));  
 vars.data2=(getObjects(js,'id','call-seller')); 
 vars.data3=(getObjects(js,'class','u-ml'));  
-Ti.API.info(vars.data3[0].dt);
+//Ti.API.info(vars.data3[0].dt);
 for(var i=0;i<vars.data3[0].dt.length;i++){
 adInfoVars+=vars.data3[0].dt[i].content+' : '+vars.data3[0].dd[i].p+'<br>';	
 }
@@ -80,7 +80,7 @@ contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
 contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
-if(vars.data0.length>1){
+if(vars.data0){
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }}else{
@@ -99,7 +99,7 @@ dataSpan="";
 arr2.push({
         image:arrImg,
         content:contentVars,
-        phone:dataSpan,
+        phone:"dataSpan",
         content2:adInfoVars
     });
 Ti.API.info(arr2[0]);
