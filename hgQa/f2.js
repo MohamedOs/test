@@ -80,8 +80,11 @@ contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
 contentVars=contentVars.replace("[object Object]"," ");
 adInfoVars=adInfoVars.replace("[object Object]"," ");
+if(vars.data0.length>0){
 for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
+}}else{
+arrImg.push("http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg");	
 }
 arr2.push({
         image:arrImg,
