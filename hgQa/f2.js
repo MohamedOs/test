@@ -93,10 +93,10 @@ if(vars.data2[0]){
 if(vars.data2[0].span[2]){
 dataSpan=vars.data2[0].span[2].content;	
 }else{
-dataSpan="";	
+dataSpan="00";	
 }	
 }else{
-dataSpan="";	
+dataSpan="00";	
 }
 arr2.push({
         image:arrImg,
