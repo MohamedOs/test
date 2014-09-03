@@ -85,7 +85,7 @@ for (var i=0;i<vars.data0.length;i++) {
 arrImg.push(vars.data0[i].src);
 }}else{
 for (var i=0;i<2;i++) {
-arrImg.push("http://upload.wikimedia.org/wikipedia/commons/3/30/Al-Hamidiyah_Souq_02.jpg");
+arrImg.push("http://www.qmraa.net/up/uploads/91b2ee8282.jpg");
 }
 }
 var dataSpan;
