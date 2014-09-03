@@ -78,17 +78,32 @@ contentVars5=contentVars5.replace("[object Object]"," ");
 adInfoVars5=adInfoVars5.replace("[object Object]"," ");
 contentVars5=contentVars5.replace("[object Object]"," ");
 adInfoVars5=adInfoVars5.replace("[object Object]"," ");
+
+if(vars5.data0.length !=0){
 for (var i=0;i<vars5.data0.length;i++) {
 arrImg5.push(vars5.data0[i].src);
+}}else{
+for (var i=0;i<2;i++) {
+arrImg5.push("http://www.qmraa.net/up/uploads/91b2ee8282.jpg");
+}
+}
+var dataSpan5;
+if(vars5.data2[0]){
+if(vars5.data2[0].span[2]){
+dataSpan5=vars5.data2[0].span[2].content;	
+}else{
+dataSpan5="00";	
+}	
+}else{
+dataSpan5="00";	
 }
 arr5.push({
-        image:arrImg5,
-        content:contentVars5,
-        phone:vars5.data2[0].span[2].content,
-        content2:adInfoVars5
-    });
-//Ti.API.info(arr2[0].image[1]);
-	activityIndicator5.hide();
-
-  });
+image:arrImg5,
+content:contentVars5,
+phone:dataSpan5,
+content2:adInfoVars5
+});
+Ti.API.info(arr5);
+activityIndicator5.hide();
+});
 }
