@@ -73,8 +73,8 @@ function getKeys(obj, val) {
   for(var i=0;i<e.data.div.p.length;i++){
             varsS3.dataP+=e.data.div.p[i];
         }
-         //varsS3.dataP=varsS3.dataP.replace("undefined","");
-         varsS3.dataP=varsS3.dataP.replace("[object Object]","");
+         varsS3.dataP=varsS3.dataP.replace("undefined","");
+         //varsS3.dataP=varsS3.dataP.replace("[object Object]","");
          arrS3.push({
          image:imgx,
          content:varsS3.dataP,
