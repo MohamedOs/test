@@ -79,7 +79,7 @@ function getKeys(obj, val) {
          image:imgx,
          content:varsS3.dataP,
             });
-     //  Ti.API.info(arrS2);
+      Ti.API.info(arrS3);
    activityIndicator3.hide();
 
    });    
