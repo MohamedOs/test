@@ -64,14 +64,19 @@ function getKeys(obj, val) {
 }
   
   
-  var data2=(getObjects(varsS3.data,'class','mwdo3_img')); 
+  var data2=(getObjects(varsS3.data,'class','mwdo3_img'));
+  if(data2[0].src){
+   var imgx=data2[0].src;	
+  }else{
+  var imgx="http://wallpapermafia.com/files/submissions/wallpapermafia-sport-007_699068136.jpg";	
+  }
   for(var i=0;i<e.data.div.p.length;i++){
             varsS3.dataP+=e.data.div.p[i];
         }
          varsS3.dataP=varsS3.dataP.replace("undefined","");
          varsS3.dataP=varsS3.dataP.replace("[object Object]","");
          arrS3.push({
-         image:data2[0].src,
+         image:imgx,
          content:varsS3.dataP,
             });
      //  Ti.API.info(arrS2);
