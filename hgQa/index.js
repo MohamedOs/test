@@ -111,16 +111,6 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	if (err) {
 		alert('Error: ' + err);
 	} else {
-		var titles=select(dom,'a.d-listing__name');
-		for (var i=0;i<titles.length;i++) {
-		  arr.push({
-                  image:photos[i].attribs.src,
-                  title:titles[i].children[0].data,
-                  href:hrefs[i].attribs.href,
-                  price:prices[i].children[0].data
-                });	
-		Ti.API.info(arr);	
-		}
 		var photos=select(dom,'img.u-img__img');
 		//Ti.API.info(photos[0].attribs.src);
 		var titles=select(dom,'a.d-listing__name');
@@ -133,6 +123,18 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		//Ti.API.info(places[0].children[1].children[0].data+' - '+places[0].children[3].children[0].data);
 		var dates=select(dom,'span.d-listing__date');
 		//Ti.API.info(dates[0].children[0].data);
+		
+		for (var i=0;i<titles.length;i++) {
+		  arr.push({
+                  image:photos[i].attribs.src,
+                  title:titles[i].children[0].data,
+                  href:hrefs[i].attribs.href,
+                  price:prices[i].children[0].data
+                });	
+		Ti.API.info(arr);	
+		}
+		
+		
 		//var rows=select(dom,'#header');
 		//Ti.API.info(rows[0]);
 		//var rows=select(dom,'div.side');
