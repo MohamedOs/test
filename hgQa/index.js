@@ -3,7 +3,13 @@ Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js
 var arr = [];
 var vars={};
 
-
+var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
+width:'80dip',
+height:'80dip',
+zIndex:1,
+backgroundColor:'black',
+borderRadius:7
+});
 
 
 
