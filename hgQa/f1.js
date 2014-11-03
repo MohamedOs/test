@@ -84,9 +84,9 @@ href:vars.d2[i].href,
 price:priceVarsP
 });
 }
-//Ti.API.info(arr);
+Ti.API.info(arr);
     activityIndicatorCatt.hide();
   	//alert("2");
- // Ti.API.info(vars.data);
+  Ti.API.info(vars.data);
   });
 }
