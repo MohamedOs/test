@@ -1,20 +1,6 @@
 Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
 Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js');
 
-var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
-width:'80dip',
-height:'80dip',
-zIndex:1,
-backgroundColor:'black',
-borderRadius:7
-});
-var arr = [];
-var vars={};
-function pri(priv,pageNumber){
-activityIndicatorCatt.show();
-//alert("1");
-//Ti.API.info("sad"+vars.data);
-vars.city=priv;
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function() {
 	 
@@ -39,7 +25,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		var titles=select(dom,'a.d-listing__name');
 		//Ti.API.info(titles[0].children[0].data);
 		var prices=select(dom,'div.d-listing__amount');
-		Ti.API.info(prices[0].children[0].data);
+		//Ti.API.info(prices[0].children[0].data);
 		var hrefs=select(dom,'a.d-listing__name');
 		//Ti.API.info(hrefs[0].attribs.href);
 		var places=select(dom,'div.d-listing__meta');
@@ -88,4 +74,3 @@ xhr.onerror = function() {
 };
 xhr.open("GET","http://qatar.dubizzle.com/ar/doha/search/");
 xhr.send();
-}
