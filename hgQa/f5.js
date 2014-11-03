@@ -13,7 +13,7 @@ function singlePost5(link){
 	var contentVars5="";
         var adInfoVars5="";
 	activityIndicator5.show();
-	var queryIndex5='select * from html where url="http://qatar.dubizzle.com'+link+'" and xpath="//*[@class=\'u-r\']"';
+	var queryIndex5='select * from html where url="http://qatar.dubizzle.com'+link+'&diagnostics=true" and xpath="//*[@class=\'u-r\']"';
   Titanium.Yahoo.yql(queryIndex5, function(et){
   	//Ti.API.info(et.data);
   	vars5.data=et.data;
