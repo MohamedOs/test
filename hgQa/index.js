@@ -15,8 +15,6 @@ activityIndicatorCatt.show();
 //alert("1");
 //Ti.API.info("sad"+vars.data);
 vars.city=priv;
-var queryIndexF1='select * from html where url="http://qatar.dubizzle.com/ar/'+priv+'/search/?diagnostics=true&page='+pageNumber+'" and xpath="//*[@class=\'d-listing__item\']"';
-
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function() {
 	 
@@ -88,6 +86,6 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-xhr.open('GET','http://qatar.dubizzle.com/ar/'+priv+'/search/&page='+pageNumber+'');
+xhr.open("GET","http://qatar.dubizzle.com/ar/doha/search/");
 xhr.send();
 }
