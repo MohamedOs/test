@@ -49,16 +49,15 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		//Ti.API.info(dates[0].children[0].data);
 		
 		for (var i=0;i<titles.length;i++) {
-			Ti.API.info(titles[i].children[0].data);
-		 // arr.push({
+		 arr.push({
                  // image:photos[i].attribs.src,
-                 // title:titles[i].children[0].data,
-                 // href:hrefs[i].attribs.href,
-                 // price:prices[i].children[0].data
-                //});	
-	//	Ti.API.info(arr);	
+                  title:titles[i].children[0].data,
+                  href:hrefs[i].attribs.href,
+                  price:prices[i].children[0].data
+                });	
+	//		
 		}
-		
+		Ti.API.info(arr);
 		
 		//var rows=select(dom,'#header');
 		//Ti.API.info(rows[0]);
