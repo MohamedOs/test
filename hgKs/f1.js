@@ -1,3 +1,4 @@
+alert("عفو يتم عمل صيانه للتطبيق لمده يومين - من المحتمل عدم عمل التطبيق باكمل وجه خلال تلك الفتره - ناسف لذلك و نشكركم على تفهمكم");
 var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 width:'80dip',
 height:'80dip',
