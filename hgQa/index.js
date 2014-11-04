@@ -11,30 +11,21 @@ borderRadius:7
 var arr = [];
 var vars={};
 function pri(priv,pageNumber){
-
-}
-
-
+activityIndicatorCatt.show();
+vars.city=priv;
 
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function() {
 	 
 var select = soupselect.select;
- /*
-var body = '<html><head><title>Test</title></head>'
-		 + '<body>'
-		 + '<img src="http://l.yimg.com/mq/i/home/HKGallery.gif" />'
-		 + '<div id="block">'
-		 + '	<div class="row">Row 1</div>'
-		 + '	<div class="row">Row 2</div>'
-		 + '</div>'
-		 + '</body></html>';
- */
+
 var body=xhr.responseText;
 var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	if (err) {
 		alert('Error: ' + err);
 	} else {
+		vars.data=select(dom,'a.d-listing__name');
+		var ds = vars.data;
 		var photos=select(dom,'img.u-img__img');
 		//Ti.API.info(photos[0].attribs.src);
 		var titles=select(dom,'a.d-listing__name');
@@ -77,7 +68,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	//		
 		}
 		Ti.API.info(arr);
-		
+		 activityIndicatorCatt.hide();
 		//var rows=select(dom,'#header');
 		//Ti.API.info(rows[0]);
 		//var rows=select(dom,'div.side');
@@ -120,3 +111,7 @@ xhr.onerror = function() {
 };
 xhr.open("GET","http://qatar.dubizzle.com/ar/doha/jobs/search/");
 xhr.send();
+
+
+
+}
