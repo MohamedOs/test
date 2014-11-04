@@ -110,5 +110,5 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-xhr.open("GET","http://qatar.dubizzle.com/ar/doha/search/");
+xhr.open("GET","http://qatar.dubizzle.com/ar/doha/jobs/search/");
 xhr.send();
