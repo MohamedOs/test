@@ -1,5 +1,3 @@
-Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
-Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js');
 
 var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 width:'80dip',
@@ -11,6 +9,9 @@ borderRadius:7
 var arr = [];
 var vars={};
 function pri(priv,pageNumber){
+Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
+Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js');
+	
 activityIndicatorCatt.show();
 vars.city=priv;
 
