@@ -109,6 +109,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
+var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
 xhr.open("GET","http://qatar.dubizzle.com/ar/doha/jobs/search/");
 xhr.send();
 
