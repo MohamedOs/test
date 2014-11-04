@@ -65,7 +65,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		priceVar=prices[0].children[0].data;	
 		priceVar=priceVar.trim();
 		}else{
-		priceVar="prices[0].children[0].data";	
+		priceVar="السعر غير متوافر";	
 		priceVar=priceVar.trim();
 		}
 		 arr.push({
