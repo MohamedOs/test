@@ -55,7 +55,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		}else{
 		imageVar="photos[0].attribs.src";	
 		}
-		if(prices[i].children){
+		if(prices[i]){
 		priceVar=prices[0].children[0].data;	
 		}else{
 		priceVar="prices[0].children[0].data";	
