@@ -49,21 +49,29 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		//Ti.API.info(dates[0].children[0].data);
 		
 		for (var i=0;i<titles.length;i++) {
-		var imageVar,priceVar;
+		var imageVar,priceVar,titleVar,hrefVar;
+		titleVar=titles[i].children[0].data;
+		titleVar=titleVar.trim();
+		hrefVar=hrefs[i].attribs.href;
+		hrefVar=hrefVar.trim();
 		if(photos[i].attribs){
 		imageVar=photos[0].attribs.src;	
+		imageVar=imageVar.trim();
 		}else{
-		imageVar="photos[0].attribs.src";	
+		imageVar="photos[0].attribs.src";
+		imageVar=imageVar.trim();
 		}
 		if(prices[i]){
 		priceVar=prices[0].children[0].data;	
+		priceVar=priceVar.trim();
 		}else{
 		priceVar="prices[0].children[0].data";	
+		priceVar=priceVar.trim();
 		}
 		 arr.push({
                   image:imageVar,
-                  title:titles[i].children[0].data,
-                  href:hrefs[i].attribs.href,
+                  title:titleVar,
+                  href:hrefVar,
                   price:priceVar
                 });	
 	//		
