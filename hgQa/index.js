@@ -46,14 +46,14 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		hrefVar=hrefs[i].attribs.href;
 		hrefVar=hrefVar.trim();
 		if(photos[i].attribs){
-		imageVar=photos[0].attribs.src;	
+		imageVar=photos[i].attribs.src;	
 		imageVar=imageVar.trim();
 		}else{
 		imageVar="photos[0].attribs.src";
 		imageVar=imageVar.trim();
 		}
 		if(prices[i]){
-		priceVar=prices[0].children[0].data;	
+		priceVar=prices[i].children[0].data;	
 		priceVar=priceVar.trim();
 		}else{
 		priceVar="السعر غير متوافر";	
