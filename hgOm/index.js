@@ -42,7 +42,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		content2=select(dom,'.u-ml__lbl');
 		content3=select(dom,'.u-ml__val');
 		for(var i=0;i<content2.length;i++){
-			arrContent.push(content2[i].children[0].data+" : "+content3[i].children[0].data);
+			arrContent.push(content2[i].children[0].data+" : "+content3[i].children[0].data +"<br>");
 		}
 	        arr2.push({
                 image:arrImg,
