@@ -10,13 +10,13 @@ borderRadius:7
 });
 var arr = [];
 var vars={};
-//function pri(priv,pageNumber){
+function pri(priv,pageNumber){
 	
 activityIndicatorCatt.show();
 vars.city=priv;
 
 var xhr = Titanium.Network.createHTTPClient();
-xhr.onload = function pri(priv,pageNumber) {
+xhr.onload = function () {
 	 
 var select = soupselect.select;
 
@@ -116,4 +116,4 @@ xhr.send();
 
 
 
-//}
+}
