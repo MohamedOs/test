@@ -1,4 +1,4 @@
-Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
+/*Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
 Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js');
 
 var activityIndicator = Titanium.UI.createActivityIndicator({
@@ -7,7 +7,7 @@ height:'80dip',
 zIndex:1,
 backgroundColor:'black',
 borderRadius:7
-});
+});*/
 var vars2={};
 var arr2 = [];
 var arrImg=[];
@@ -15,7 +15,7 @@ var arrContent=[];
 function singlePost(link){
 var contentVars="";
 var adInfoVars="";
-activityIndicator.show();
+//activityIndicator.show();
 
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function() {
@@ -51,7 +51,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
                 content2:arrContent
                   });
                 Ti.API.info(arr2[0]);
-                activityIndicator.hide();
+                //activityIndicator.hide();
 	}
 });
  
