@@ -1,6 +1,6 @@
 //Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
 //Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js');
-var remoteInclude1 = function (url) {
+var remoteInclude = function (url) {
     var httpClient = Titanium.Network.createHTTPClient();
  
     httpClient.onload = function (e) {
@@ -12,24 +12,12 @@ var remoteInclude1 = function (url) {
         tempFile.deleteFile();
     };
  
-    httpClient.open("GET", "https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js");
+    httpClient.open("GET", url);
     httpClient.send();
 };
-var remoteInclude2 = function (url) {
-    var httpClient = Titanium.Network.createHTTPClient();
- 
-    httpClient.onload = function (e) {
-        var tempFile = Titanium.Filesystem.createTempFile();
-        tempFile.write(this.responseText);
- 
-        Titanium.include(tempFile.nativePath);
-        alert("2");
-        tempFile.deleteFile();
-    };
- 
-    httpClient.open("GET", "https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js");
-    httpClient.send();
-};
+remoteInclude("https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js");
+remoteInclude("https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js");
+
 
 var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 width:'80dip',
