@@ -61,7 +61,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		//Ti.API.info(dates[0].children[0].data);
 		
 		for (var i=0;i<titles.length;i++) {
-		var imageVar,priceVar,titleVar,hrefVar;
+		var imageVar,priceVar,titleVar,hrefVar,placeVar,dateVar;
 		titleVar=titles[i].children[0].data;
 		titleVar=titleVar.trim();
 		hrefVar=hrefs[i].attribs.href;
@@ -80,11 +80,15 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		priceVar="السعر غير متوافر";	
 		priceVar=priceVar.trim();
 		}
+		placeVar=places[i].children[1].children[0].data+' - '+places[i].children[3].children[0].data;
+		dateVar=dates[i].children[0].data;
 		 arr.push({
                   image:imageVar,
                   title:titleVar,
                   href:hrefVar,
-                  price:priceVar
+                  price:priceVar,
+                  place:placeVar,
+                  date:dateVar
                 });	
 	//		
 		}
