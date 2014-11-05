@@ -32,7 +32,7 @@ var arr = [];
 var vars={};
 function pri(priv,pageNumber){
 	
-activityIndicatorCatt.show();
+//activityIndicatorCatt.show();
 vars.city=priv;
 
 var xhr = Titanium.Network.createHTTPClient();
@@ -95,7 +95,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	//		
 		}
 		Ti.API.info(arr);
-		 activityIndicatorCatt.hide();
+		 $.actInWin.hide();
 	
 	}
 });
