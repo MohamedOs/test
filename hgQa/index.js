@@ -32,7 +32,7 @@ function pri(priv,pageNumber){
 	
 activityIndicatorCatt.show();
 vars.city=priv;
-/*
+
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function () {
 	 
@@ -107,7 +107,7 @@ xhr.onerror = function() {
 var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
 xhr.open("GET",url);
 xhr.send();
-*/
+
 
 
 }
