@@ -8,7 +8,7 @@ remoteInclude1 = function (url) {
         tempFile.write(this.responseText);
  
         Titanium.include(tempFile.nativePath);
- 
+        alert("1");
         tempFile.deleteFile();
     };
  
@@ -23,7 +23,7 @@ remoteInclude2 = function (url) {
         tempFile.write(this.responseText);
  
         Titanium.include(tempFile.nativePath);
- 
+        alert("2");
         tempFile.deleteFile();
     };
  
@@ -44,7 +44,7 @@ function pri(priv,pageNumber){
 	
 activityIndicatorCatt.show();
 vars.city=priv;
-
+/*
 var xhr = Titanium.Network.createHTTPClient();
 xhr.onload = function () {
 	 
@@ -100,31 +100,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		}
 		Ti.API.info(arr);
 		 activityIndicatorCatt.hide();
-		//var rows=select(dom,'#header');
-		//Ti.API.info(rows[0]);
-		//var rows=select(dom,'div.side');
-		//Ti.API.info(rows);
-		/*var rows=select(dom,'.title');
-		Ti.API.info(rows[0]);
-		Ti.API.info("rows[0]");
-		var rows1=select(dom,'a.title');
-		Ti.API.info(rows1[0]);
-	    Ti.API.info("rows[1]");
-		var rows2=select(dom,'a');
-		Ti.API.info(rows2[0]);*/
-		/*
-		var img = select(dom, 'img');
- 
-		img.forEach(function(img) {
-			alert('src: ' + img.attribs.src);
-		});
-		*/
- /*
-		var rows = select(dom, 'div.cnn_hppersonalhdr');
- 
-		rows.forEach(function(row) {
-			Ti.API.info(row.children[0].data);
-		});*/
+	
 	}
 });
  
@@ -143,7 +119,7 @@ xhr.onerror = function() {
 var url="http://qatar.dubizzle.com/ar/"+priv+"/search/?page="+pageNumber;
 xhr.open("GET",url);
 xhr.send();
-
+*/
 
 
 }
