@@ -46,8 +46,13 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		for(var i=0;i<content2.length;i++){
 			arrContent.push(content2[i].children[0].data+" : "+content3[i].children[0].data +"<br>");
 		}
-		if(phone[0].children){
-		var phoneVar=phone[0].children[0].data;
+		if(phone){
+			if(phone[0].children){
+			var phoneVar=phone[0].children[0].data;	
+			}else{
+			var phoneVar="00";		
+			}
+		
 		}else{
 		var phoneVar="00";	
 		}
