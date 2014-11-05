@@ -8,7 +8,6 @@ var remoteInclude = function (url) {
         tempFile.write(this.responseText);
  
         Titanium.include(tempFile.nativePath);
-        alert("1");
         tempFile.deleteFile();
     };
  
