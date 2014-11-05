@@ -63,6 +63,7 @@ parser.parseComplete(body);
 xhr.onerror = function() {
     Titanium.API.info('error');
 };
-xhr.open("GET","http://oman.dubizzle.com/ar/al-sharqiya/cars/toyota/listing/23-listings-638075f310c157218f47bff0f1004bc5/show/?back=L2FyL2FsLXNoYXJxaXlhL2hvbWUv");
+var url2="http://qatar.dubizzle.com"+link;
+xhr.open("GET",url2);
 xhr.send();
 }
