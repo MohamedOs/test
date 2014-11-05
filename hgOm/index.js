@@ -31,9 +31,11 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		var image,content,phone,content2,content3;
 		image=select(dom,'.rsImg');
 		//Ti.API.info(image);
+		if(image !="null"){
 		for(var i=0;i<image.length;i++){
 			arrImg.push(image[i].attribs.src);
 		//	Ti.API.info(image[i].attribs.src);
+		}
 		}
 		content=select(dom,'div.u-c.u-c--12o12.u-helper--margin-v-large div p');
 		//Ti.API.info(content[0].children[0].data);
@@ -44,10 +46,16 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		for(var i=0;i<content2.length;i++){
 			arrContent.push(content2[i].children[0].data+" : "+content3[i].children[0].data +"<br>");
 		}
+		if(phone[0].children){
+		var phoneVar=phone[0].children[0].data;
+		}else{
+		var phoneVar="00";	
+		}
+		var phoneVar=
 	        arr2.push({
                 image:arrImg,
                 content:content[0].children[0].data,
-                phone:phone[0].children[0].data,
+                phone:phoneVar,
                 content2:arrContent
                   });
                 Ti.API.info(arr2[0]);
