@@ -56,7 +56,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		}else{
 		var phoneVar="00";	
 		}
-		var phoneVar=
+		
 	        arr2.push({
                 image:arrImg,
                 content:content[0].children[0].data,
