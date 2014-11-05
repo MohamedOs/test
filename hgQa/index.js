@@ -1,6 +1,6 @@
 //Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js');
 //Ti.include('https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js');
-remoteInclude1 = function (url) {
+var remoteInclude1 = function (url) {
     var httpClient = Titanium.Network.createHTTPClient();
  
     httpClient.onload = function (e) {
@@ -15,7 +15,7 @@ remoteInclude1 = function (url) {
     httpClient.open("GET", "https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js");
     httpClient.send();
 }
-remoteInclude2 = function (url) {
+var remoteInclude2 = function (url) {
     var httpClient = Titanium.Network.createHTTPClient();
  
     httpClient.onload = function (e) {
