@@ -14,7 +14,7 @@ var remoteInclude1 = function (url) {
  
     httpClient.open("GET", "https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js");
     httpClient.send();
-}
+};
 var remoteInclude2 = function (url) {
     var httpClient = Titanium.Network.createHTTPClient();
  
@@ -29,7 +29,7 @@ var remoteInclude2 = function (url) {
  
     httpClient.open("GET", "https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js");
     httpClient.send();
-}
+};
 
 var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 width:'80dip',
