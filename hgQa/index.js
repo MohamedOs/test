@@ -95,7 +95,7 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 	//		
 		}
 		Ti.API.info(arr);
-		 activityIndicatorCatt.hide();
+		// activityIndicatorCatt.hide();
 	
 	}
 });
