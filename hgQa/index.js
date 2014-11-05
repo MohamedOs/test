@@ -20,14 +20,14 @@
 remoteInclude("https://raw.githubusercontent.com/MohamedOs/lib/master/htmlparser.js");
 remoteInclude("https://raw.githubusercontent.com/MohamedOs/lib/master/soupselect.js");
 */
-
+/*
 var activityIndicatorCatt = Titanium.UI.createActivityIndicator({
 width:'80dip',
 height:'80dip',
 zIndex:1,
 backgroundColor:'black',
 borderRadius:7
-});
+});*/
 var arr = [];
 var vars={};
 function pri(priv,pageNumber){
@@ -81,7 +81,9 @@ var handler = new htmlparser.DefaultHandler(function(err, dom) {
 		priceVar=priceVar.trim();
 		}
 		placeVar=places[i].children[1].children[0].data+' - '+places[i].children[3].children[0].data;
+		placeVar=placeVar.trim();
 		dateVar=dates[i].children[0].data;
+		dateVar=dateVar.trim();
 		 arr.push({
                   image:imageVar,
                   title:titleVar,
